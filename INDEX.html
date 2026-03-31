@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Vista Linda - Aluguel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #e0f7fa, #f2f6f9);
+}
+
+header {
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+header h1 { font-size: 40px; margin:0; }
+header p { font-size:18px; }
+
+nav {
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  background:#fff;
+  padding:15px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  text-decoration:none;
+  color:#0a4d68;
+  font-weight:600;
+}
+nav a:hover { color:#088395; }
+
+section { padding:50px 20px; }
+
+.container {
+  max-width:1100px;
+  margin:auto;
+}
+
+.card {
+  background:#fff;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* CARROSSEL */
+.carousel {
+  position:relative;
+  overflow:hidden;
+  border-radius:15px;
+}
+
+.carousel img {
+  width:100%;
+  display:none;
+}
+
+.carousel img.active {
+  display:block;
+}
+
+.carousel button {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.5);
+  color:white;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+  border-radius:50%;
+}
+
+.prev { left:10px; }
+.next { right:10px; }
+
+/* VIDEO */
+video {
+  width:100%;
+  height:400px;
+  border-radius:15px;
+  object-fit:cover;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* PREÇO */
+.price-box {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.price {
+  flex:1;
+  background:linear-gradient(135deg,#088395,#0a4d68);
+  color:white;
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+}
+
+.price:hover {
+  transform:scale(1.05);
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer {
+  background:#0a4d68;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Casa na Praia - Vista Linda</h1>
+  <p>Conforto, lazer e descanso a poucos metros do mar 🌊</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#fotos">Fotos</a>
+  <a href="#video">Tour</a>
+  <a href="#valores">Valores</a>
+</nav>
+
+<section id="sobre">
+  <div class="container card">
+    <h2>Sobre a Casa</h2>
+    <p>
+Desfrute de momentos incríveis em uma casa completa, espaçosa e perfeita para relaxar! 🌊✨  
+O imóvel conta com <strong>2 quartos confortáveis</strong>, uma <strong>sala ampla e aconchegante</strong> ideal para reunir a família, além de uma <strong>cozinha interna totalmente equipada</strong>.  
+
+Na parte externa, você encontra uma <strong>área gourmet perfeita para churrascos</strong> e confraternizações, proporcionando lazer e conforto em todos os momentos.  
+
+A casa possui <strong>2 banheiros, 2 chuveiros e uma ducha externa</strong>, garantindo praticidade para todos. O espaço é <strong>arejado, amplo e muito bem distribuído</strong>, com <strong>estacionamento grande</strong> para vários veículos.  
+
+Localizada em um <strong>bairro tranquilo e seguro</strong>, está <strong>próxima da praia e da rodoviária</strong>, facilitando seu acesso e tornando sua estadia ainda mais confortável.  
+
+🌴 <strong>O lugar ideal para descansar, curtir e criar memórias inesquecíveis!</strong>
+</p>
+  </div>
+</section>
+
+<section id="fotos">
+  <div class="container">
+    <h2>Fotos</h2>
+
+    <div class="carousel">
+      <img src="foto1.jpg" class="active">
+      <img src="foto2.jpg">
+      <img src="foto3.jpg">
+      <img src="foto4.jpg">
+      <img src="foto5.jpg">
+      <img src="foto6.jpg">
+      <img src="foto7.jpg">
+      <img src="foto8.jpg">
+<img src="foto9.jpg">
+<img src="foto10.jpg">
+<img src="foto11.jpg">
+<img src="foto12.jpg">
+<img src="foto13.jpg">
+<img src="foto14.jpg">
+
+      <button class="prev" onclick="changeSlide(-1)">❮</button>
+      <button class="next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- 🔥 NOVA SEÇÃO DE VÍDEO -->
+<section id="video">
+  <div class="container">
+    <h2>🎥 Tour pela Casa</h2>
+
+    <video controls autoplay muted loop>
+      <source src="video.mp4.mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+
+  </div>
+</section>
+
+<section id="valores">
+  <div class="container">
+    <h2>Valores</h2>
+
+    <div class="price-box">
+      <div class="price">Diária<br><strong>R$ 450</strong></div>
+      <div class="price">A partir de 3 dias<br><strong>R$ 1.200</strong></div>
+      <div class="price">Fim de Semana<br><strong>R$ 450</strong></div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Casa Vista Linda</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5511954036891?text=Olá! Tenho interesse na casa da praia." target="_blank">
+  Fale no WhatsApp
+</a>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.carousel img');
+
+function changeSlide(step) {
+  slides[index].classList.remove('active');
+  index = (index + step + slides.length) % slides.length;
+  slides[index].classList.add('active');
+}
+</script>
+
+</body>
+</html>
